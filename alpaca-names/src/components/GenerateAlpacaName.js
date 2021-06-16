@@ -1,5 +1,6 @@
 import React from 'react';
 import DisplayName from './DisplayName';
+import generateAlpacaName from '../services/NameGenerationService'
 
 class GenerateAlpacaName extends React.Component{
     constructor(props){
@@ -12,10 +13,10 @@ class GenerateAlpacaName extends React.Component{
     }
 
     generateAlpacaName(){
-        //todo: retrieve name from service
-        var name = "New name";
-
-        this.setState(state => ({alpacaName: name}));
+        generateAlpacaName()
+            .then(name => {
+                this.setState(() => ({alpacaName: name}));
+            });
     }
 
     render(){

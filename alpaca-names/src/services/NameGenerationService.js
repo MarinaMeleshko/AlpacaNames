@@ -7,3 +7,5 @@ export async function generateAlpacaName(){
         return null;
     }
 }
+
+export default generateAlpacaName;
