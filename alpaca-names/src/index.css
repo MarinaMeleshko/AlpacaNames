@@ -1,0 +1,51 @@
+:root {
+    --grain-color: #D7CEC7;
+    --blackboard-color: #565656;
+    --oxblood-color: #76323F;
+    --tan-color: #C09F80;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+}
+
+/*Alpaca Names classes*/
+.AlpacaNames-nav-bar {
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+.AlpacaNames-button {
+    background-color: var(--oxblood-color);
+    color: whitesmoke;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+}
+
+.AlpacaNames-link {
+    color: var(--blackboard-color);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.AlpacaNames-card {
+    background-color: var(--tan-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.AlpacaNames-card .row>* {
+    width: initial;
+}
+
+.AlpacaNames-caption {
+    text-align: center;
+    margin: 5px;;
+}

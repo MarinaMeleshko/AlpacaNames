@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css'
 
-import GenerateAlpacaName from './components/GenerateAlpacaName'
+import AlpacaNamesApp from './components/Common/AlpacaNamesApp'
+
+import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
-    <GenerateAlpacaName></GenerateAlpacaName>,
+    <AlpacaNamesApp></AlpacaNamesApp>,
     document.getElementById('root')
 );

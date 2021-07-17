@@ -5,7 +5,7 @@ function DisplayName(props){
 
     return (
         <div>
-            <h2>{message}</h2>
+            <h2 className="AlpacaNames-caption">{message}</h2>
         </div>
     );
 }
