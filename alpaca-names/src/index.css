@@ -11,12 +11,38 @@ html {
 
 body {
     min-height: 100%;
+    height: 1px;
 }
+
+#root, #root>div {
+    height: 100%;
+}
+
+footer {
+    width: fit-content!important;
+    opacity: 0.6;
+    margin-bottom: 10px;
+}
+
 
 /*Alpaca Names classes*/
 .AlpacaNames-nav-bar {
+    position: sticky;
+    top: 0;
+}
+
+.AlpacaNames-nav-bar-content {
     background-color: whitesmoke;
     height: 50px;
+}
+
+.AlpacaNames-main-container {
+    height: -webkit-fill-available;
+}
+
+.AlpacaNames-main-container>.row {
+    height: 100%;
+    align-items: center;
 }
 
 .AlpacaNames-button {
@@ -39,6 +65,10 @@ body {
     background-color: var(--tan-color);
     padding: 5px;
     border-radius: 5px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .AlpacaNames-card .row>* {

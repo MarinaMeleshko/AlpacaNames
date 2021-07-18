@@ -5,18 +5,20 @@ import Col from 'react-bootstrap/Col';
 
 import NavigationBar from './NaigationBar';
 import GenerateAlpacaName from '../GenerateName/GenerateAlpacaName';
+import Footer from './Footer';
 
 export default function AlpacaNamesApp(props){
     return (
         <div>
             <NavigationBar></NavigationBar>
-            <Container>
+            <Container className="AlpacaNames-main-container">
                 <Row className="justify-content-center">
                     <Col xs={6}>
                         <GenerateAlpacaName></GenerateAlpacaName>
                     </Col>
                 </Row>
             </Container>
+            <Footer></Footer>
         </div>
     );
 }
