@@ -31,10 +31,29 @@ footer {
     top: 0;
 }
 
+/*Nav bar*/
 .AlpacaNames-nav-bar-content {
     background-color: whitesmoke;
     height: 50px;
+    align-items: center;
 }
+
+@media (min-width: 768px){
+    .AlpacaNames-nav-bar-content .nav-bar-item:first-child {
+        margin-left: 10%;
+    }
+}
+
+.AlpacaNames-nav-bar-content .nav-bar-item {
+    width: fit-content;
+}
+
+.nav-bar-item img{
+    width: 30px;
+}
+
+
+
 
 .AlpacaNames-main-container {
     height: -webkit-fill-available;

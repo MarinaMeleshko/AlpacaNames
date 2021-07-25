@@ -1,15 +1,22 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 export default function NavigationBar(props){
     return (
         <Container fluid className="AlpacaNames-nav-bar">
             <Row className="AlpacaNames-nav-bar-content">
-                <Col>
-
-                </Col>
+                <div className="nav-bar-item">
+                    <Link to="/">
+                        <img alt="Home" src="/img/llama.svg"></img>
+                    </Link>
+                </div>
+                <div className="nav-bar-item">
+                    <Link to="/photos">
+                        <img alt="Photos" src="/img/camera.svg"/>
+                    </Link>
+                </div>
             </Row>
         </Container>
     )
