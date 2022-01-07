@@ -52,16 +52,23 @@ footer {
     width: 30px;
 }
 
-
-
-
 .AlpacaNames-main-container {
-    height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100% - 50px)!important;
 }
 
 .AlpacaNames-main-container>.row {
     height: 100%;
     align-items: center;
+}
+
+.AlpacaNames-main-container>.content {
+    flex: 1 0 auto;
+}
+
+.AlpacaNames-main-container>.footer {
+    flex: 0 0 auto;
 }
 
 .AlpacaNames-button {

@@ -13,7 +13,7 @@ export default function AlpacaNamesApp(props){
         <div>
             <NavigationBar></NavigationBar>
             <Container className="AlpacaNames-main-container">
-                <Row className="justify-content-center">
+                <Row className="justify-content-center content">
                     <Col xs={11} md={6}>
                         <Switch>
                             <Route path="/photos">
@@ -25,8 +25,8 @@ export default function AlpacaNamesApp(props){
                         </Switch>
                     </Col>
                 </Row>
+                <Footer className="footer"></Footer>
             </Container>
-            <Footer></Footer>
         </div>
     );
 }
