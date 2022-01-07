@@ -28,7 +28,7 @@ export default function AlpacaNamesApp(props){
                                 <AddAlpacaPhoto alpacaName={alpacaName}></AddAlpacaPhoto>
                             </RedirectRoute>
                             <Route path="/">
-                                <GenerateAlpacaName updateAlpacaName={(name) => setAlpacaName(name)}></GenerateAlpacaName>
+                                <GenerateAlpacaName updateAlpacaName={setAlpacaName}></GenerateAlpacaName>
                             </Route>
                         </Switch>
                     </Col>
