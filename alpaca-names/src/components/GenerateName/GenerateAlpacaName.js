@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 
 import DisplayName from './DisplayName';
@@ -8,7 +9,8 @@ class GenerateAlpacaName extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            alpacaName: ""
+            alpacaName: "",
+            updateAlpacaName: props.updateAlpacaName
         };
         
         this.generateAlpacaName = this.generateAlpacaName.bind(this);
@@ -18,22 +20,30 @@ class GenerateAlpacaName extends React.Component{
         generateAlpacaName()
             .then(name => {
                 this.setState(() => ({alpacaName: name}));
+                this.state.updateAlpacaName(name);
             });
     }
 
     render(){
         return (
-            <div class="AlpacaNames-card">
+            <>
+            <div className="AlpacaNames-card">
                 <Row className="justify-content-center">
                     <DisplayName name={this.state.alpacaName}></DisplayName>
                 </Row>
                 <Row className="justify-content-center">
                     <button className="AlpacaNames-button" onClick={this.generateAlpacaName}>Generate</button>
                 </Row>
-                <Row className="justify-content-center">
-                    <a href="#" className="AlpacaNames-link">Add photo</a>
-                </Row>
+
+                {this.state.alpacaName !== "" &&
+                    <Row className="justify-content-center">
+                        <Link to="/addphoto" className="AlpacaNames-link">
+                            Add photo
+                        </Link>
+                    </Row>
+                }
             </div>
+            </>
         )
     }
 }

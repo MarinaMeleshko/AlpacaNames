@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <Router>
-        <AlpacaNamesApp></AlpacaNamesApp>
+        <AlpacaNamesApp alpacaName={""}></AlpacaNamesApp>
     </Router>,
     document.getElementById('root')
 );
