@@ -1,20 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-class AddAlpacaPhoto extends React.Component{
-    constructor(props){
-        super(props);
+export default function AddAlpacaPhoto(props){
+    const alpacaName = useState(props.alpacaName);
+    const photo = useState(null);
 
-        this.state = {
-            alpacaName: props.alpacaName,
-            photo: null
-        };
-    }
-
-    render(){
-        return(
-            <h2>Alpaca: {this.state.alpacaName}</h2>
-        );
-    }
+    return(
+        <h2>Alpaca: {alpacaName}</h2>
+    );
 }
-
-export default AddAlpacaPhoto;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function DisplayName(props){
+export default function DisplayName(props){
     const message = props.name ? `Your alpaca name: ${props.name}!` : "Choose your alpaca name!";
 
     return (
@@ -9,5 +9,3 @@ function DisplayName(props){
         </div>
     );
 }
-
-export default DisplayName;

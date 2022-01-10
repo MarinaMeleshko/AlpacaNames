@@ -24,7 +24,7 @@ export default function AlpacaNamesApp(props){
                             <Route path="/photos">
                                 <h2>Photos</h2>
                             </Route>
-                            <RedirectRoute path="/addphoto" redirectCondition={alpacaName === ""} redirectPath={"/"}>
+                            <RedirectRoute path="/addphoto" isRedirect={alpacaName === ""} redirectPath={"/"}>
                                 <AddAlpacaPhoto alpacaName={alpacaName}></AddAlpacaPhoto>
                             </RedirectRoute>
                             <Route path="/">
