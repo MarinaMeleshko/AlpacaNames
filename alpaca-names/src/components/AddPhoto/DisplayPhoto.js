@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 export default function DisplayPhoto(props){
-    const url = useState(props.url);
-
     return(
         <div>
-            <img src={url || "/img/llama.svg"} alt="Selected alpaca photo"></img>
+            <img src={props.url || "/img/llama.svg"} alt="Alpaca"></img>
         </div>
     )
 }
