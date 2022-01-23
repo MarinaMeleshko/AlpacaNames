@@ -1,0 +1,11 @@
+{
+    "submit": "Submit",
+    "photos": "Photos",
+    "copyright": "AlpacaNames @2021",
+    "home": "Home",
+    "yourAlpacaName": "Your alpaca name: {{ name }}!",
+    "chooseAlpacaName": "Choose your alpaca name!",
+    "generate": "Generate",
+    "addPhoto": "Add photo",
+    "alpaca": "Alpaca"
+}

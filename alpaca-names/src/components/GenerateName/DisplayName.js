@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
+
+import LocalizationContext from '../../Localization/LocalizationContext';
 
 export default function DisplayName(props){
-    const message = props.name ? `Your alpaca name: ${props.name}!` : "Choose your alpaca name!";
+    const { t } = useContext(LocalizationContext);
+    const message = props.name ? t('yourAlpacaName', {name: props.name}) : t('chooseAlpacaName');
 
     return (
         <div>

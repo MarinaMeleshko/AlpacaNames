@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
 import Row from 'react-bootstrap/Row';
 
 import DisplayName from './DisplayName';
 import generateAlpacaName from '../../services/NameGenerationService'
+import LocalizationContext from '../../Localization/LocalizationContext';
 
 export default function GenerateAlpacaName(props){
     const [alpacaName, setAlpacaName] = useState("");
+    const { t } = useContext(LocalizationContext);
 
     const onGenerateAlpacaNameClick = function(){
         generateAlpacaName()
@@ -22,13 +24,13 @@ export default function GenerateAlpacaName(props){
                 <DisplayName name={alpacaName}></DisplayName>
             </Row>
             <Row className="justify-content-center">
-                <button className="AlpacaNames-button" onClick={onGenerateAlpacaNameClick}>Generate</button>
+                <button className="AlpacaNames-button" onClick={onGenerateAlpacaNameClick}>{t('generate')}</button>
             </Row>
 
             {alpacaName !== "" &&
                 <Row className="justify-content-center">
                     <Link to="/addphoto" className="AlpacaNames-link">
-                        Add photo
+                        {t('addPhoto')}
                     </Link>
                 </Row>
             }

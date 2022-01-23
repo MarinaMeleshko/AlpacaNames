@@ -1,0 +1,11 @@
+{
+    "submit": "Сохранить",
+    "photos": "Фото",
+    "copyright": "AlpacaNames @2021",
+    "home": "На главную",
+    "yourAlpacaName": "Имя вашей альпаки: {{ name }}!",
+    "chooseAlpacaName": "Выберите имя для вашей альпаки!",
+    "generate": "Сгенерировать",
+    "addPhoto": "Добавить фото",
+    "alpaca": "Альпака"
+}

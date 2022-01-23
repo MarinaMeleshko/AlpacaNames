@@ -1,4 +1,3 @@
-import { process } from 'ipaddr.js';
 import React from 'react';
 
 export default class ErrorBoundary extends React.Component{

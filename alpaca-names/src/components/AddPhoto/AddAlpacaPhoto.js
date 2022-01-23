@@ -1,12 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import RedirectRoute from '../Common/RedirectRoute';
 
 import DisplayPhoto from './DisplayPhoto';
+import LocalizationContext from '../../Localization/LocalizationContext';
 
 export default function AddAlpacaPhoto(props){
     const alpacaName = useState(props.alpacaName);
     const [photoUrl, setPhotoUrl] = useState(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const { t } = useContext(LocalizationContext);
 
     const submit = function(e){
         //todo: save name and photo of alpaca to DB
@@ -28,12 +30,12 @@ export default function AddAlpacaPhoto(props){
 
     return(
         <div>
-            <h2>Alpaca: {alpacaName}</h2>
+            <h2>{t('alpaca')}: {alpacaName}</h2>
             <DisplayPhoto url={photoUrl}></DisplayPhoto>
 
             <form onSubmit={submit}>
                 <input type="file" accept="image/*" onChange={updatePhotoUrl}></input>
-                <button type="submit">Submit</button>
+                <button type="submit">{t('submit')}</button>
             </form>
         </div>
     );
